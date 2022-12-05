@@ -46,7 +46,7 @@ while page_number <= 10:
     all_data = pd.concat([all_data, df], ignore_index=True)
 
     if page_number == 10:
-        continue
+        break
 
     next_button = wait.until(EC.presence_of_element_located((By.XPATH,
                                                              '//*[@id="bodycontents"]/div[2]/form/div[1]/div[2]/a')))
